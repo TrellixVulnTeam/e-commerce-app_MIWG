@@ -17,7 +17,7 @@ function App() {
             <Route
               exact
               path="/products/:id"
-              render={(props) => <ProductInfo />}
+              render={(props) => <ProductInfo {...props} />}
             />
             <Route path="/products" render={(props) => <ProductsPage />} />
           </Switch>

@@ -1,0 +1,32 @@
+.product-info {
+  display: flex;
+  justify-content: center;
+
+  &__gallery {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__gallery-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 50px;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    max-width: 500px;
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-right: 5px;
+    }
+  }
+}
