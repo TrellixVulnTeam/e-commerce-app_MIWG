@@ -1,0 +1,28 @@
+.sidebar {
+  &__title {
+    margin-bottom: 56px;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+
+    p {
+      font-weight: 400;
+    }
+
+    img {
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+}

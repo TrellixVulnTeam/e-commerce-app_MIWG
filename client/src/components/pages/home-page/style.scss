@@ -1,0 +1,45 @@
+.cards {
+  &__discount {
+    background-color: #bce7f0;
+    max-width: 647px;
+    width: 100%;
+    height: 180px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__column {
+    max-width: 647px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cards-people {
+  display: flex;
+  height: 100%;
+
+  &__image {
+    max-width: 311px;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}

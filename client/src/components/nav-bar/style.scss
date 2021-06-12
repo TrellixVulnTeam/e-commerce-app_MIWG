@@ -1,0 +1,14 @@
+.nav {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    font-weight: 400;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+}
