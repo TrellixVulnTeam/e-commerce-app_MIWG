@@ -1,12 +1,14 @@
 import React, { FC } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { productItems } from '../../../data/data';
+import { IProductItem } from '../../../interfaces';
 import './style.scss';
 
 type TParams = { id: string | undefined };
 
 const ProductInfo: FC<RouteComponentProps<TParams>> = ({ match }) => {
-  const product = productItems.find((item) => item.id === match.params.id);
+  const product = productItems.find(
+    (item: IProductItem) => item.id === match.params.id
+  );
   return (
     <div className="product-info">
       <div className="product-info__gallery">

@@ -1,17 +1,31 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import Sidebar from '../../side-bar/Sidebar';
 import './style.scss';
-import { productItems } from '../../../data/data';
 import { Link } from 'react-router-dom';
+import { IProductItem } from '../../../interfaces';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { RootState } from '../../../redux/store';
+import { fetchProducts } from '../../../redux/actions/getProducts';
 
 const ProductsPage: FC = () => {
+  const dispatch = useAppDispatch();
+  const { products } = useAppSelector((state: RootState) => state.products);
+
+  console.log(products);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
   const renderProducts = () => {
-    return productItems.map((item) => {
+    return products?.map((item: IProductItem) => {
       return (
-        <div className="products__item">
+        <div key={item.id} className="products__item">
           <Link to={`/products/${item.id}`}>
             <div className="products__image">
-              <img src={item.image} alt="Product" />
+              <img
+                src={`data:image/jpeg;base64, ${item.image}`}
+                alt="Product"
+              />
             </div>
           </Link>
           <div className="products__info">
