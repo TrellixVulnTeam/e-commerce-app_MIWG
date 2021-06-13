@@ -27,7 +27,7 @@ export const fetchProducts = () => {
     console.log('fetch thunk');
     fetch('http://localhost:5000/api/products/shirts')
       .then((res) => {
-        res.json();
+        return res.json();
       })
       .then((data) => {
         console.log(data, 'data from fetch');
